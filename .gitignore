@@ -1,0 +1,5 @@
+artifacts/
+logs/
+test/
+config.ini
+scenario.json
