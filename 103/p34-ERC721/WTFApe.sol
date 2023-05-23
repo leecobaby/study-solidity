@@ -2,7 +2,7 @@
 // by 0xAA
 pragma solidity ^0.8.4;
 
-import "./ERC721.sol";
+import "../public/ERC721.sol";
 
 contract WTFApe is ERC721 {
     uint public MAX_APES = 10000; // 总量
