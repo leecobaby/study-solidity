@@ -382,7 +382,7 @@ contract ERC1155 is IERC165, IERC1155, IERC1155MetadataURI {
         string memory baseURI = _baseURI();
         return
             bytes(baseURI).length > 0
-                ? string(abi.encodePacked(baseURI, id.toString()))
+                ? string(abi.encodePacked(baseURI, id.toString(), ".json"))
                 : "";
     }
 

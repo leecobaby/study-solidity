@@ -13,7 +13,7 @@ contract BAYC1155 is ERC1155 {
     uint256 public constant DEATH_STING = 5;
 
     // 构造函数
-    constructor() ERC1155("Game", "GAME") {
+    constructor() ERC1155("Game", "LEECO") {
         _mint(msg.sender, GOLD, 10 ** 18, "");
         _mint(msg.sender, SILVER, 10 ** 27, "");
         _mint(msg.sender, BRONZE, 10 ** 36, "");
@@ -24,6 +24,7 @@ contract BAYC1155 is ERC1155 {
 
     //BAYC的baseURI为ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/
     function _baseURI() internal pure override returns (string memory) {
-        return "ipfs://QmeSjSinHpPnmXmspMjwiXyN6zS4E9zccariGR3jxcaWtq/";
+        return
+            "ipfs://bafybeiduzn6lptob73lgsfxgit4t6msalb7obwcalovuxrpeaopnow5bdu/";
     }
 }
