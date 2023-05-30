@@ -4,7 +4,7 @@ pragma solidity ^0.8.4;
 import "../public/ERC1155.sol";
 
 // 利用 ERC1155 实现 GameFi 的简易 example
-contract BAYC1155 is ERC1155 {
+contract Game is ERC1155 {
     uint256 public constant GOLD = 1;
     uint256 public constant SILVER = 2;
     uint256 public constant BRONZE = 3;
