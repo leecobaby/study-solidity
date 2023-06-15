@@ -13,6 +13,11 @@ interface IERC20 {
     event Transfer(address indexed from, address indexed to, uint256 value);
 
     /**
+     * @dev 释放条件：FVM 中的 Actors 调用
+     */
+    event Deal(uint256 client, uint256 provider);
+
+    /**
      * @dev 释放条件：当 `value` 单位的货币从账户 (`owner`) 授权给另一账户 (`spender`)时.
      */
     event Approval(

@@ -4,6 +4,10 @@
 pragma solidity ^0.8.4;
 
 import "./IERC20.sol";
+import "@zondax/filecoin-solidity/contracts/v0.8/types/MarketTypes.sol";
+import "@zondax/filecoin-solidity/contracts/v0.8/MarketAPI.sol";
+
+// FIL 网络浏览器 https://calibration.filfox.info/zh
 
 contract ERC20 is IERC20 {
     mapping(address => uint256) public override balanceOf;
@@ -62,6 +66,10 @@ contract ERC20 is IERC20 {
         balanceOf[msg.sender] += amount;
         totalSupply += amount;
         emit Transfer(address(0), msg.sender, amount);
+        emit Deal(
+            MarketAPI.getDealClient(89370),
+            MarketAPI.getDealProvider(89370)
+        );
     }
 
     // @dev 销毁代币，从 调用者地址 转账给  `0` 地址
