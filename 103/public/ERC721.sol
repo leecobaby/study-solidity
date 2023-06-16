@@ -256,7 +256,7 @@ contract ERC721 is IERC721, IERC721Metadata {
         string memory baseURI = _baseURI();
         return
             bytes(baseURI).length > 0
-                ? string(abi.encodePacked(baseURI, tokenId.toString()))
+                ? string(abi.encodePacked(baseURI, tokenId.toString(), ".json"))
                 : "";
     }
 
